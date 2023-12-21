@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Ephesis';
+  src: url(../font/Ephesis-Regular.ttf);
+}
+
+:root{
+ font-family: Arial,system-ui,sans-serif;
+}
