@@ -10,7 +10,8 @@
   font-family: Arial,system-ui,sans-serif;
   height: 100%;
   width: 100%;
-  --bg-primary:#31221b
+  --bg-primary:#31221b;
+  --fg-red:#e50003;
 }
 body{
   display: flex;
@@ -33,9 +34,19 @@ body{
 #signUpContainer{
   padding: 100px 50px;
   width: clamp(300px,95%,100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 #signUpContainer p{
   line-height: 1.5em
+}
+#signUpContainer div:only-of-type #logIn{
+  font-weight: 600;
+  color:var(--fg-red);
+  /* text-align: left; */
+  /* width: 100%; */
 }
 form{
   display: grid;
