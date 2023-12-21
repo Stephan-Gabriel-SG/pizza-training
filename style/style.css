@@ -34,6 +34,9 @@ body{
   padding: 100px 50px;
   width: clamp(300px,95%,100%);
 }
+#signUpContainer p{
+  line-height: 1.5em
+}
 form{
   display: grid;
   flex-wrap: wrap;
