@@ -2,18 +2,32 @@
   font-family: 'Ephesis';
   src: url(../font/Ephesis-Regular.ttf);
 }
-
-:root{
+*{
   margin: 0;
   padding: 0;
+}
+:root{
   font-family: Arial,system-ui,sans-serif;
+  height: 100%;
+  width: 100%;
+  --bg-primary:#31221b
 }
 body{
   display: flex;
+  height: 100%;
+}
+#imageContainer{
+  width: clamp(600px,70%,1024px);
+  background: var(--bg-primary);
+}
+#imageContainer img{
+  width: max(250px,100%);
+  height: max(94%);
 }
 form{
   display: flex;
   flex-wrap: wrap;
+  gap:10vw
 }
 form div{
   display: flex;
