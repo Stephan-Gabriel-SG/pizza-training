@@ -39,9 +39,10 @@ body{
 }
 form{
   display: grid;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 2vw;
-  flex-direction: column;
+  column-gap: 15vh;
+  /* flex-direction: column; */
   align-items: center;
 }
 form div{
