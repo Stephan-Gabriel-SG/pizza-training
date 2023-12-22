@@ -15,17 +15,38 @@ const handleSubmit = (event) => {
   // }
 }
 const handleChangeInput = ({ target }) => {
-  console.log(target.id, target.value)
   inputBean[target.id] = target.value
+  if (target.id === 'psw') {
+    handleVerifyConfirmPsw()
+  }
 }
 
-document.getElementById('confirmPsw').addEventListener('input', (event) => {
+const handleVerifyConfirmPsw = (event) => {
   const p = document.getElementById('confirmPswError')
-  if (inputBean.psw !== event.target.value) {
+  let confirmPsw
+  if (event) {
+    confirmPsw = event.target.value
+  } else {
+    confirmPsw = document.getElementById('confirmPsw').value
+  }
+  if (inputBean.psw !== confirmPsw) {
     p.style.visibility = ''
     p.innerText = 'different from password.'
   } else {
     p.innerText = ''
     p.style.visibility = 'hidden'
   }
+}
+const switchShowPsw = (inputId, value) => {
+  if (value) {
+    document.getElementById(inputId).setAttribute('type', 'text')
+  } else {
+    document.getElementById(inputId).setAttribute('type', 'password')
+  }
+}
+document.getElementById('showPsw').addEventListener('click', (event) => {
+  switchShowPsw('psw', event.target.checked)
+})
+document.getElementById('showConfirmPsw').addEventListener('click', (event) => {
+  switchShowPsw('confirmPsw', event.target.checked)
 })
