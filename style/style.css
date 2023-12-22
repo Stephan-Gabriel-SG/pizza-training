@@ -3,12 +3,16 @@
   src: url(../font/Ephesis-Regular.ttf);
   font-display: block;
 }
+@font-face {
+  font-family: 'Normal';
+  src: url(../font//Montserrat.ttf);
+}
 *{
   margin: 0;
   padding: 0;
 }
 :root{
-  font-family: Arial,system-ui,sans-serif;
+  font-family: Normal,Arial,system-ui,sans-serif;
   height: 100%;
   width: 100%;
   --bg-primary:#56020a;
@@ -17,11 +21,13 @@
   --fg-min-white:#bababa;
   --fg-yellow:#ee7808;
   --color-shadow:#211218;
-
 }
 body{
   display: flex;
   height: 100%;
+}
+input{
+  font-family: Normal,Arial,system-ui,sans-serif;
 }
 #logoContainer{
   font-family: Ephesis,'Open Sans',system-ui;
@@ -84,6 +90,8 @@ input[type="checkbox"]:focus{
 div#submit input{
   padding: 10px 15px;
   font-size: 1.1em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
   background-color: var(--fg-yellow);
   border: none;
   border-radius: 5px;
@@ -198,6 +206,9 @@ div#submit input:hover{
 }
 @media screen and (max-width:600px)
 {
+  #signUpContainer h2{
+    font-size: 1.7em;
+  }
   #imageContainer #logoContainer{
     top: 5%;
     right: 0;
