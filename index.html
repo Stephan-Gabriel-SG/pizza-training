@@ -45,14 +45,14 @@
             <label for="psw">password</label>
             <input type="password" id="psw" minlength="6" maxlength="15" required required value="" oninput="handleChangeInput(event)">  
             <label for="showPsw">
-              <input type="checkbox" id="showPsw"/> show confirm password
+              <input type="checkbox" id="showPsw"/> <span>confirm password</span> 
             </label>
           </div>  
           <div>
             <label for="confirmPsw">confirm password</label>
             <input type="password" id="confirmPsw" minlength="6" maxlength="15" required value="" oninput="handleVerifyConfirmPsw(event)">
             <label for="showConfirmPsw">
-              <input type="checkbox" id="showConfirmPsw"/> show confirm password
+              <input type="checkbox" id="showConfirmPsw"/> <span>show confirm password</span> 
             </label>
           </div>
           <p id="confirmPswError" class="error">
