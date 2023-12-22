@@ -27,7 +27,7 @@
          <form onsubmit="handleSubmit(event)">
           <div>
             <label for="firstName">First name</label>
-            <input type="text" id='firstName' required minlength="5" maxlength="50" value="">
+            <input type="text" id='firstName' required minlength="5" maxlength="50" onchange="handleChangeInput(event)" value="">
           </div>
           <div>
             <label for="lastName">last name</label>
@@ -43,12 +43,15 @@
           </div>
           <div>
             <label for="psw">password</label>
-            <input type="password" id="psw"  minlength="6" maxlength="15"  required value="">  
+            <input type="password" id="psw" minlength="6" maxlength="15" required required value="">  
           </div>  
           <div>
             <label for="confirmPsw">confirm password</label>
             <input type="password" id="confirmPsw" minlength="6" maxlength="15" required value="">
-          </div> 
+          </div>
+          <p id="confirmPswError" class="error">
+
+          </p>
           <div id="submit">
             <input type="submit" value="creat account">
           </div>
