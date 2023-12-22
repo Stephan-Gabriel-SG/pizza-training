@@ -17,23 +17,7 @@ body{
   display: flex;
   height: 100%;
 }
-#imageContainer{
-  width: clamp(600px,80%,800px);
-  background: var(--bg-primary);
-} 
-#imageContainer > img+img{
-  display: none;
-}
-#imageContainer img{
-  width: max(300px,100%);
-  height: max(94%);
-}
-#imageContainer div{
-  text-align: center;
-  padding:2% 0;
-  color: #bababa;
-  letter-spacing: 1.5px;
-}
+
 #signUpContainer{
   padding: 100px 50px;
   width: clamp(300px,95%,100%);
@@ -72,6 +56,23 @@ div#submit input{
   font-size: 1.1em;
 }
 @media screen and (min-width:1024px) {
+  #imageContainer{
+    width: clamp(600px,80%,800px);
+    background: var(--bg-primary);
+  } 
+  #imageContainer img+img{
+    display: none;
+  }
+  #imageContainer img{
+    width: max(300px,100%);
+    height: max(94%);
+  }
+  #imageContainer div{
+    text-align: center;
+    padding:2% 0;
+    color: #bababa;
+    letter-spacing: 1.5px;
+  }
   form{
     display: grid;
     gap: 2vw;
@@ -86,6 +87,7 @@ div#submit input{
     align-items: center;
   }
 }
+
 @media screen and (max-width:1023px) {
   body{
     flex-direction: column;
@@ -95,12 +97,16 @@ div#submit input{
     width: 100%;
     height: 200px;
   }
-  #imageContainer:first-child
+  #imageContainer img:first-of-type
   {
     display: none;
   }
-  #imageContainer>img+img{
-    display: block;
+  #imageContainer img+img{
+    height: 100%;
+    width: 100%;
+  }
+  #imageContainer div{
+    display: none;
   }
   #signUpContainer{
     padding: 50px 0px;
@@ -109,6 +115,7 @@ div#submit input{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 15px;
   }
   
 }
