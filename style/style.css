@@ -21,7 +21,7 @@ body{
   height: 100%;
 }
 #logoContainer{
-  font-family: Ephesis;
+  font-family: Ephesis,'Open Sans',system-ui;
 }
 #signUpContainer{
   padding: 100px 50px;
@@ -52,8 +52,13 @@ form div input{
 form label{
   text-transform: capitalize;
 }
-input[type="text"]{
+input:not([type="submit"]){
   font-size: 1.1em;
+  border-color: var(--bg-primary);
+}
+input:not([type="submit"]):focus
+{
+  outline: 3px solid #ee7808;
 }
 div#submit input{
   padding: 10px 15px;

@@ -24,30 +24,30 @@
         </p>
          <p>You know you want to.</p>
          <h2>Join our formation by sign up...</h2>
-         <form>
+         <form onsubmit="handleSubmit(event)">
           <div>
             <label for="firstName">First name</label>
-            <input type="text" id='firstName' value="">
+            <input type="text" id='firstName' required minlength="5" maxlength="50" value="">
           </div>
           <div>
             <label for="lastName">last name</label>
-            <input type="text" id='lastName' value="">
+            <input type="text" id='lastName' required minlength="5" maxlength="50" value="">
           </div>
           <div>
             <label for="email">email</label>
-            <input type="text" id="email" value="">
+            <input type="email" id="email" maxlength="50" required value="">
           </div>
           <div>
             <label for="phone">phone number</label>
-            <input type="text" id="phone" value="">  
+            <input type="text" id="phone" required minlength="8" maxlength="15" value="">  
           </div>
           <div>
             <label for="psw">password</label>
-            <input type="text" id="psw" value="">  
+            <input type="password" id="psw"  minlength="6" maxlength="15"  required value="">  
           </div>  
           <div>
             <label for="confirmPsw">confirm password</label>
-            <input type="text" id="confirmPsw" value="">
+            <input type="password" id="confirmPsw" minlength="6" maxlength="15" required value="">
           </div> 
           <div id="submit">
             <input type="submit" value="creat account">
@@ -55,5 +55,6 @@
           </form>
           <div>Already have an account ? <span id="logIn">Log In</span></div>
       </div>
+      <script type="text/javascript" src="./js/util.js"></script>
 </body>
 </html>
