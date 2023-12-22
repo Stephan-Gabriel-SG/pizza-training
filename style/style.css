@@ -34,14 +34,15 @@ input{
   font-family: Ephesis,'Open Sans',system-ui;
 }
 #signUpContainer{
-  padding: 14px 14px;
   /* width: clamp(420px,60%,100%); */
   width: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  justify-content: center;
 }
+
 #signUpContainer h2{
   color: var(--fg-primary);
   font-size: 1.4em;
@@ -124,7 +125,7 @@ div#submit input:hover{
   color: var(--fg-red);
 }
 
-@media screen and (min-width:1023.1px) {
+@media screen and (min-width: 1023.1px) {
   #imageContainer #logoContainer label::before{
     content: '';
     background-image: url(../logo.svg);
@@ -145,8 +146,9 @@ div#submit input:hover{
     display: none;
   }
   #imageContainer img{
-    width: max(350px,100%);
-    height: max(94%);
+    max-width: max(350px,100%);
+    object-fit: cover;
+    height: 94%;
   }
   #imageContainer div{
     text-align: center;
@@ -189,6 +191,9 @@ div#submit input:hover{
     flex-direction: column;
     align-items: center;
   }
+  #signUpContainer{
+    padding: 14px 14px;
+  }
   #imageContainer{
     width: 100%;
     height: 200px;
@@ -220,7 +225,7 @@ div#submit input:hover{
     display: none;
   }
   #signUpContainer{
-    padding: 50px 0px;
+    /* padding: 50px 0px; */
   }
   form{
     display:flex;
@@ -234,6 +239,9 @@ div#submit input:hover{
   body{
     flex-direction: column;
     align-items: center;
+  }
+  #signUpContainer{
+    padding: 14px 14px;
   }
   #imageContainer{
     width: 100%;
@@ -258,7 +266,7 @@ div#submit input:hover{
   #imageContainer #logoContainer{
     top: 5%;
     right: 0;
-    width: 50%;
+    width: 54%;
     text-align: center;
   }
   #imageContainer #logoContainer label{
@@ -281,6 +289,9 @@ div#submit input:hover{
     gap: 25px;
     flex-direction: column;
     font-size: .9em;
+  }
+  #signUpContainer{
+    padding: 14px 14px;
   }
   #imageContainer #logoContainer {
     top: 35%;
