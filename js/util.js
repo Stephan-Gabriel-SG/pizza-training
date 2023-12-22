@@ -21,7 +21,6 @@ const handleChangeInput = ({ target }) => {
 
 document.getElementById('confirmPsw').addEventListener('input', (event) => {
   const p = document.getElementById('confirmPswError')
-  alert('change')
   if (inputBean.psw !== event.target.value) {
     p.style.visibility = ''
     p.innerText = 'different from password.'
@@ -29,5 +28,4 @@ document.getElementById('confirmPsw').addEventListener('input', (event) => {
     p.innerText = ''
     p.style.visibility = 'hidden'
   }
-  console.log('changeConfirmPsw')
 })
