@@ -8,11 +8,6 @@ let inputBean = {
 
 const handleSubmit = (event) => {
   event.preventDefault()
-  console.log('submit')
-  const inputs = document.getElementsByTagName('input')
-  // for (let index = 0; index < inputs.length - 1; index++) {
-  //   console.log(inputs[index].checkValidity())
-  // }
 }
 const handleChangeInput = ({ target }) => {
   inputBean[target.id] = target.value

@@ -27,15 +27,22 @@ body{
   font-family: Ephesis,'Open Sans',system-ui;
 }
 #signUpContainer{
-  padding: 100px 50px;
+  padding: 50px 50px;
   width: clamp(300px,95%,100%);
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30px;
 }
+#signUpContainer h2{
+  color: var(--fg-yellow);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
 #signUpContainer p{
   line-height: 1.5em;
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 #signUpContainer div:only-of-type #logIn{
   font-weight: 600;
@@ -68,8 +75,8 @@ form div label[for^='show']{
 }
 input[type="checkbox"]{
   accent-color: var(--fg-yellow);
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 input[type="checkbox"]:focus{
   outline: none;
@@ -104,6 +111,7 @@ div#submit input:hover{
     width: clamp(600px,80%,800px);
     background: var(--bg-primary);
     position: relative;
+    box-shadow: 1px 0 6px 2px var(--color-shadow);
   } 
   #imageContainer img+img{
     display: none;
