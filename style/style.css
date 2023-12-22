@@ -12,12 +12,15 @@
   width: 100%;
   --bg-primary:#31221b;
   --fg-red:#e50003;
+  --color-shadow:#211218
 }
 body{
   display: flex;
   height: 100%;
 }
-
+#logoContainer{
+  font-family: Ephesis;
+}
 #signUpContainer{
   padding: 100px 50px;
   width: clamp(300px,95%,100%);
@@ -59,6 +62,7 @@ div#submit input{
   #imageContainer{
     width: clamp(600px,80%,800px);
     background: var(--bg-primary);
+    position: relative;
   } 
   #imageContainer img+img{
     display: none;
@@ -72,6 +76,17 @@ div#submit input{
     padding:2% 0;
     color: #bababa;
     letter-spacing: 1.5px;
+  }
+  #imageContainer #logoContainer{
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    background: #397a0282;
+    box-shadow: 0 0 4px 0px var(--color-shadow);
+  }
+  #imageContainer #logoContainer span:first-of-type{
+    font-size: 4em;
+    color: white;
   }
   form{
     display: grid;
