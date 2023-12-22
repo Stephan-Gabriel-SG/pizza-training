@@ -16,7 +16,7 @@
   height: 100%;
   width: 100%;
   --bg-primary:#56020a;
-  --bg-logo:#397a0282;
+  --fg-primary:#902933;
   --fg-red:#e50003;
   --fg-min-white:#bababa;
   --fg-yellow:#ee7808;
@@ -25,6 +25,7 @@
 body{
   display: flex;
   height: 100%;
+  gap: 1vw;
 }
 input{
   font-family: Normal,Arial,system-ui,sans-serif;
@@ -33,22 +34,23 @@ input{
   font-family: Ephesis,'Open Sans',system-ui;
 }
 #signUpContainer{
-  padding: 50px 50px;
-  width: clamp(300px,95%,100%);
+  padding: 14px 14px;
+  /* width: clamp(420px,60%,100%); */
+  width: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30px;
 }
 #signUpContainer h2{
-  color: var(--fg-yellow);
-  font-size: 2.5em;
+  color: var(--fg-primary);
+  font-size: 1.4em;
   margin-bottom: 30px;
+  text-align: center;
 }
 #signUpContainer p{
-  line-height: 1.5em;
-  font-size: 1.1em;
-  margin-bottom: 20px;
+  line-height: 1.3em;
+  font-size: 1em;
 }
 #signUpContainer div:only-of-type #logIn{
   font-weight: 600;
@@ -60,6 +62,7 @@ form div{
   flex-direction: column;
   gap:8px;
   text-overflow: ellipsis;
+  align-items: stretch;
 }
 form label{
   text-transform: capitalize;
@@ -86,7 +89,7 @@ form div label[for^='show']{
   gap: 10px;
 }
 input[type="checkbox"]{
-  accent-color: var(--fg-yellow);
+  accent-color: var(--fg-primary);
   width: 18px;
   height: 18px;
 }
@@ -94,11 +97,11 @@ input[type="checkbox"]:focus{
   outline: none;
 }
 div#submit input{
-  padding: 10px 15px;
+  padding: 15px 20px;
   font-size: 1.1em;
   text-transform: capitalize;
   letter-spacing: 1px;
-  background-color: var(--fg-yellow);
+  background-color: var(--fg-primary);
   border: none;
   border-radius: 5px;
   transition: .3s;
@@ -107,7 +110,7 @@ div#submit input{
 }
 div#submit input:hover{
   transform: translateY(-3px);
-  background-color: #da6e09;
+  background-color: #5e1920;
 }
 #imageContainer #logoContainer{
   position: absolute;
@@ -121,9 +124,19 @@ div#submit input:hover{
   color: var(--fg-red);
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1023.1px) {
+  #imageContainer #logoContainer label::before{
+    content: '';
+    background-image: url(../logo.svg);
+    background-size: 64px 64px;
+    height: 100%;
+    background-repeat: no-repeat;
+    width: 70px;
+    transform: rotate(-25deg);
+    margin-top: 9px;
+  }
   #imageContainer{
-    width: clamp(600px,80%,800px);
+    max-width: 50%;
     background: var(--bg-primary);
     position: relative;
     box-shadow: 1px 0 6px 2px var(--color-shadow);
@@ -132,7 +145,7 @@ div#submit input:hover{
     display: none;
   }
   #imageContainer img{
-    width: max(300px,100%);
+    width: max(350px,100%);
     height: max(94%);
   }
   #imageContainer div{
@@ -142,16 +155,19 @@ div#submit input:hover{
     letter-spacing: 1.5px;
   }
   #imageContainer #logoContainer{
+    display: flex;
     top: 18%;
     width: 100%;
+    justify-content: center;
   }
   #imageContainer #logoContainer label:first-of-type{
-    font-size: 4em;
+    font-size: 3.5em;
+    display: flex;
   }
   form{
     display: grid;
     gap: 2vw;
-    column-gap: 15vh;
+    column-gap: 5vmax;
     align-items: center;
   }
   form div:nth-child(2n+2 ){
@@ -164,11 +180,11 @@ div#submit input:hover{
   .error{
     grid-column: 1 / span 2;
     text-align: right;
-    margin-right: 10%;
+    margin-right: 2%;
   }
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) and (min-width:600px) {
   body{
     flex-direction: column;
     align-items: center;
@@ -185,6 +201,7 @@ div#submit input:hover{
   #imageContainer img+img{
     height: 100%;
     width: 100%;
+    top: 0;
   }
   #imageContainer #logoContainer{
     top: 9%;
@@ -198,12 +215,7 @@ div#submit input:hover{
     padding: 4px 2px;
     text-align: center;
 }
-#imageContainer #logoContainer label::before{
-  content: '';
-  background-image: url(../logo.svg);
-  background-size: 100px 100px;
-  position: fixed;
-}
+
   #imageContainer div:last-of-type{
     display: none;
   }
@@ -217,15 +229,36 @@ div#submit input:hover{
     gap: 15px;
   } 
 }
-@media screen and (max-width:600px)
+@media screen and (max-width:600px)and (min-width:280.1px)
 {
+  body{
+    flex-direction: column;
+    align-items: center;
+  }
+  #imageContainer{
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0px 4px 0px var(--color-shadow);
+  }
+  #imageContainer img:first-of-type
+  {
+    display: none;
+  }
+  #imageContainer div:last-of-type{
+    display: none;
+  }
+  #imageContainer img+img{
+    height: 100%;
+    width: 100%;
+    top: 0;
+  } 
   #signUpContainer h2{
     font-size: 1.7em;
   }
   #imageContainer #logoContainer{
     top: 5%;
     right: 0;
-    width: 45%;
+    width: 50%;
     text-align: center;
   }
   #imageContainer #logoContainer label{
@@ -233,5 +266,58 @@ div#submit input:hover{
     font-size: 2.5em;
     padding: 4px 2px;
     text-align: center;
+  }
+  form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+  } 
 }
+
+@media screen and (max-width:280px){
+  body{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    font-size: .9em;
+  }
+  #imageContainer #logoContainer {
+    top: 35%;
+    right: 0;
+    padding: 2px;
+    text-align: center;
+  }
+  #imageContainer #logoContainer label{
+    width: 100%;
+    font-size: 2.5em;
+    padding: 4px 2px;
+    text-align: center;
+  }
+  #imageContainer img:first-of-type
+  {
+    display: none;
+  }
+  #imageContainer div:last-of-type{
+    display: none;
+  }
+  #imageContainer{
+    position: relative;
+    max-width: 280px;
+    height: 200px;
+  }
+  #imageContainer img+img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+  }
+  form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+  } 
+  div#submit input{
+    padding: 10px 15px;
+  }
 }
