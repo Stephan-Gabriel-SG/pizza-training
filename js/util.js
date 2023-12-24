@@ -8,6 +8,12 @@ let inputBean = {
 
 const handleSubmit = (event) => {
   event.preventDefault()
+  alert(`\n
+        ${inputBean["firstName"]}\n
+        ${inputBean["lastName"]}\n
+        ${inputBean["email"]}\n
+        ${inputBean["phone"]}\n
+        `)
 }
 const handleChangeInput = ({ target }) => {
   inputBean[target.id] = target.value
