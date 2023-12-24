@@ -146,7 +146,7 @@ div#submit input:hover{
     display: none;
   }
   #imageContainer img{
-    max-width: max(350px,100%);
+    /* max-width: max(350px,100%); */
     object-fit: cover;
     height: 94%;
   }
