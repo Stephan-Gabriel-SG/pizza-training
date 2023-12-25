@@ -58,7 +58,7 @@ document.getElementById('showConfirmPsw').addEventListener('click', (event) => {
   switchShowPsw('confirmPsw', event.target.checked)
 })
 document.getElementById('logIn').addEventListener('click', (event) => {
-  alert('login page is not already done....')
+  alert('The login page has not been completed yet....')
 })
 window.addEventListener('load', function () {
   document.body.classList.add('loaded')
