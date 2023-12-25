@@ -28,7 +28,7 @@ body{
   gap: 1vw;
 }
 input{
-  font-family: Normal,Arial,system-ui,sans-serif;
+  font-family: inherit;
 }
 #logoContainer{
   font-family: Ephesis,'Open Sans',system-ui;
