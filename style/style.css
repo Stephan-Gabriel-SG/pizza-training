@@ -123,6 +123,16 @@ div#submit input:hover{
 .error{
   color: var(--fg-red);
 }
+#logIn{
+  position: absolute;
+  cursor:pointer;
+  margin-left: 10px;
+  transition: .3s;
+}
+#logIn:hover
+{
+  transform: translateY(-3px);
+}
 
 @media screen and (min-width: 1023.1px) {
   #imageContainer #logoContainer label::before{
@@ -145,8 +155,7 @@ div#submit input:hover{
     display: none;
   }
   #imageContainer img{
-    max-width: max(350px,100%);
-    /* max-width: clamp(350px,25vw,50%); */
+    width: max(350px,100%);
     object-fit: cover;
     height: 94%;
   }
