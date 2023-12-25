@@ -216,6 +216,7 @@ div#submit input:hover{
     height: 100%;
     width: 100%;
     top: 0;
+    object-fit: cover;
   }
   #imageContainer #logoContainer{
     top: 9%;
@@ -266,6 +267,7 @@ div#submit input:hover{
     height: 100%;
     width: 100%;
     top: 0;
+    object-fit: cover;
   } 
   #signUpContainer h2{
     font-size: 1.7em;

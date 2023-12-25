@@ -9,10 +9,10 @@ let inputBean = {
 const handleSubmit = (event) => {
   event.preventDefault()
   alert(`\n
-        ${inputBean["firstName"]}\n
-        ${inputBean["lastName"]}\n
-        ${inputBean["email"]}\n
-        ${inputBean["phone"]}\n
+        ${inputBean['firstName']}\n
+        ${inputBean['lastName']}\n
+        ${inputBean['email']}\n
+        ${inputBean['phone']}\n
         `)
 }
 const handleChangeInput = ({ target }) => {
@@ -50,4 +50,7 @@ document.getElementById('showPsw').addEventListener('click', (event) => {
 })
 document.getElementById('showConfirmPsw').addEventListener('click', (event) => {
   switchShowPsw('confirmPsw', event.target.checked)
+})
+document.getElementById('logIn').addEventListener('click', (event) => {
+  alert('login page is not already done....')
 })
