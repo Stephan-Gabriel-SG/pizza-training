@@ -54,3 +54,6 @@ document.getElementById('showConfirmPsw').addEventListener('click', (event) => {
 document.getElementById('logIn').addEventListener('click', (event) => {
   alert('login page is not already done....')
 })
+window.addEventListener('load', function () {
+  document.body.classList.add('loaded')
+})
