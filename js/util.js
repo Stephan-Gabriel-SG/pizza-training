@@ -14,6 +14,12 @@ const handleSubmit = (event) => {
         ${inputBean['email']}\n
         ${inputBean['phone']}\n
         `)
+  const inputs = document.getElementsByTagName('input')
+  for (let index = 0; index < inputs.length; index++) {
+    if (inputs[index].type !== 'submit' && inputs[index].type !== 'checkbox') {
+      inputs[index].value = ''
+    }
+  }
 }
 const handleChangeInput = ({ target }) => {
   inputBean[target.id] = target.value
