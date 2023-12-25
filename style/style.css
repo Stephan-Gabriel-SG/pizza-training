@@ -34,7 +34,6 @@ input{
   font-family: Ephesis,'Open Sans',system-ui;
 }
 #signUpContainer{
-  /* width: clamp(420px,60%,100%); */
   width: auto;
   display: flex;
   align-items: center;
@@ -137,7 +136,7 @@ div#submit input:hover{
     margin-top: 9px;
   }
   #imageContainer{
-    max-width: 50%;
+    width: 55%;
     background: var(--bg-primary);
     position: relative;
     box-shadow: 1px 0 6px 2px var(--color-shadow);
@@ -146,7 +145,8 @@ div#submit input:hover{
     display: none;
   }
   #imageContainer img{
-    /* max-width: max(350px,100%); */
+    max-width: max(350px,100%);
+    /* max-width: clamp(350px,25vw,50%); */
     object-fit: cover;
     height: 94%;
   }
@@ -224,9 +224,7 @@ div#submit input:hover{
   #imageContainer div:last-of-type{
     display: none;
   }
-  #signUpContainer{
-    /* padding: 50px 0px; */
-  }
+
   form{
     display:flex;
     flex-direction: column;
